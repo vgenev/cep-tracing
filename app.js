@@ -23,7 +23,6 @@
  ******/
 
 'use strict'
-// const Tracer = require('./src/lib/tracer')
 const setup = require('./src/setup').setup
 const Logger = require('@mojaloop/central-services-shared').Logger
 

@@ -33,8 +33,8 @@ const Enums = require('./lib/enum')
 const Logger = require('@mojaloop/central-services-shared').Logger
 const Rx = require('rxjs')
 const { share, filter, flatMap } = require('rxjs/operators')
-const Observables = require('./observables')
 const createHealtcheck = require('healthcheck-server')
+const Observables = require('./observables')
 const Config = require('./lib/config')
 const { initLogger } = require('./lib/efk')
 
@@ -46,14 +46,14 @@ const setup = async () => {
   const topicName = Utility.transformGeneralTopicName(Enums.eventType.EVENT)
   const consumer = Consumer.getConsumer(topicName)
 
-  // createHealtcheck({
-  //   port: Config.get('PORT'),
-  //   path: '/health',
-  //   status: ({ cpu, memory }) => {
-  //     if (consumer._status.running) return true
-  //     else return false
-  //   }
-  // })
+  createHealtcheck({
+    port: Config.get('PORT'),
+    path: '/health',
+    status: ({ cpu, memory }) => {
+      if (consumer._status.running) return true
+      else return false
+    }
+  })
 
   const topicObservable = Rx.Observable.create((observer) => {
     consumer.on('message', async (message) => {

@@ -27,8 +27,5 @@
 module.exports = {
   actionObservable: require('./actions').actionObservable,
   fluentdObservable: require('./fluentd-logger').FluentdLoggerObservable,
-  // tracerObservable: require('./tracerObservable').openTracerObservable,
-  // callbackObservable: require('./callback').sendCallback,
   apmTracerObservable: require('./apmTracerObservable').apmTracerObservable
-// rulesObservable: require('./rules').rulesObservable
 }
