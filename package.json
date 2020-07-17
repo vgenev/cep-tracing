@@ -17,7 +17,7 @@
     "jaeger-client": "^3.15.0",
     "json-rules-engine": "2.3.0",
     "lazy-ass": "1.6.0",
-    "lodash": "4.17.11",
+    "lodash": "4.17.19",
     "mustache": "3.0.0",
     "nodemailer": "4.6.8",
     "request": "^2.88.0",
