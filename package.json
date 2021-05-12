@@ -19,7 +19,7 @@
     "lazy-ass": "1.6.0",
     "lodash": "4.17.11",
     "mustache": "3.0.0",
-    "nodemailer": "4.6.8",
+    "nodemailer": "6.4.16",
     "request": "^2.88.0",
     "request-promise-native": "^1.0.7",
     "rxjs": "6.3.3",
